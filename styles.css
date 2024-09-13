@@ -1,0 +1,77 @@
+.spoiler {
+    /* display: inline-flex; */
+
+    align-items: center;
+    transition: 100ms;
+    color: transparent;
+    background: black;
+    border-radius: 1em;
+    border: 0.1em solid black;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.spoiler:hover {
+    box-shadow: 0 0 0 0.1em black;
+}
+.spoiler::before {
+    content: "Click to reveal";
+    margin: auto;
+    transform: translate(0%, -10%);
+
+    padding-left: 0.5em;
+    font-size: 0.8em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+
+};
+.unselectable {
+}
+
+
+#tag-display {
+    transition: all 250ms ease-in-out;
+    /* transition: left 0s;
+    transition: top 0s; */
+    scrollbar-width: none;
+    min-height: 0;
+    overflow: scroll;
+    max-width: 300px;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: row;
+    opacity: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    background:black;
+    position: absolute;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.5rem;
+    border: solid red 4px;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+#tag-display.visible-tag {
+    opacity: 1;
+}
+
+.tag {
+    white-space: nowrap;
+    background: darkblue;
+    padding: 0.25em 0.5em;
+    border-radius: 10%;
+}
